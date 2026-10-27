@@ -11,13 +11,13 @@ function App() {
     setError(null);
 
     try {
-      const response = await fetch(process.env.REACT_APP_API_URL, {
-        method: 'POST',
+      const response = await fetch("https://f1hfzyy9wk.execute-api.ap-northeast-2.amazonaws.com/default/cas3135-2012131029-fib", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({ x: x, y: y }),
-      });
+        body: JSON.stringify({ x: Number(x), y: Number(y) }),
+    });
 
       const data = await response.json();
 
